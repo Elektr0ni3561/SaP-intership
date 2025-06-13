@@ -14,5 +14,5 @@ def date_in_future(integer):
     print((datetime.today() + timedelta(days=integer)).strftime(DATE_PATTERN))
 
 if __name__ == "__main__":
-    date_in_future([]) # => текущая дата
-    date_in_future(2) # => текущая дата + 2 дня
+    date_in_future([])  # => текущая дата
+    date_in_future(2)   # => текущая дата + 2 дня
