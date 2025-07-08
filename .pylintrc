@@ -1,0 +1,17 @@
+[MESSAGES CONTROL]
+disable =
+    missing-function-docstring,
+    missing-module-docstring,
+    missing-class-docstring,
+    multiple-spaces-before-comment  # Конкретно для пробелов в комментах
+
+[FORMAT]
+max-line-length = 120       # Совместимость с Black
+single-line-if-stmt = no    # Запретить однострочные if
+max-module-lines = 1500     # Макс. строк в модуле
+
+[DESIGN]
+max-args = 6                # Макс. аргументов функции
+max-locals = 15             # Макс. переменных в функции
+max-branches = 12           # Макс. ветвлений в функции
+max-statements = 50         # Макс. операторов в функции
