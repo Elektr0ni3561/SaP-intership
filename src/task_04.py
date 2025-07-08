@@ -1,16 +1,21 @@
-# Дан список целых чисел. Необходимо разработать метод sort_list(list), который
-# поменяет местами все минимальные и максимальные элементы массива, а также
-# добавит в конец массива одно минимальное значение из него.
+"""
+Дан список целых чисел. Необходимо разработать метод sort_list(list), который
+поменяет местами все минимальные и максимальные элементы массива, а также
+добавит в конец массива одно минимальное значение из него.
+"""
 
-def sort_list(_list = None):
-    if _list is None or len(_list) == 0: return []
+def sort_list(_list=None):
+    if _list is None or len(_list) == 0:
+        return []
 
     minimum = None
     maximum = None
 
     for i in _list:
-        if minimum is None or i < minimum: minimum = i
-        if maximum is None or i > maximum: maximum = i
+        if minimum is None or i < minimum:
+            minimum = i
+        if maximum is None or i > maximum:
+            maximum = i
     # Пытался придумать как не проходить список два раза.
     # Но понял, что на это уйдёт чуть больше времени, чем планировал, поэтому оставил так.
     for i in range(len(_list)):
@@ -22,7 +27,9 @@ def sort_list(_list = None):
             continue
 
     _list.append(minimum)
+
     return _list
+
 
 if __name__ == "__main__":
     print(sort_list([]))            # => []

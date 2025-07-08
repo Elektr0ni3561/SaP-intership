@@ -1,17 +1,24 @@
-# Дан список элементов произвольной природы. Необходимо разработать метод
-# max_odd(array), который определит максимальный нечетный элемент (21.000 = 21 и
-# тоже считается нечетным элементом). Вернуть None, если таких элементов нет в
-# переданном массиве.
+"""
+Дан список элементов произвольной природы. Необходимо разработать метод
+max_odd(array), который определит максимальный нечетный элемент (21.000 = 21 и
+тоже считается нечетным элементом). Вернуть None, если таких элементов нет в
+переданном массиве.
+"""
 
 def max_odd(_array):
     maximum = None
     for i in _array:
         # Использую отрицание в if, чтобы не создавать лишнюю вложенность.
-        if not (isinstance(i, (int, float)) and int(i) == i): continue
+        if not (isinstance(i, (int, float)) and int(i) == i):
+            continue
         i = int(i)
-        if not i % 2 == 1: continue
-        if maximum is None or i > maximum: maximum = i
+        if not i % 2 == 1:
+            continue
+        if maximum is None or i > maximum:
+            maximum = i
+
     return maximum
+
 
 if __name__ == "__main__":
     print(max_odd([1, 2, 3, 4, 4]))                     # => 3
